@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Belajar HTML Java Script</title>
+  </head>
+
+  <body>
+    <!-- Percobaan JS 1 -->
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      Klik disini untuk menampilkan tanggal
+    </button>
+    <p id="demo"></p>
+
+    <!-- Pecobaan JS 2 -->
+    <p id="demo1"></p>
+    <script>
+      document.getElementById('demo1').innerHTML = 'Hello World Java Script';
+    </script>
+
+    <!-- Percobaaan JS 3 -->
+    <button type="button" onclick="myFunction()">
+      Klik disini
+    </button>
+    <button type="button" onclick="myFunction1()">
+      Style
+    </button>
+
+    <p id="demo2"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById('demo2').innerHTML = 'Hello World Java Script';
+      }
+
+      function myFunction1() {
+        document.getElementById('demo2').style.fontSize = '25px';
+        document.getElementById('demo2').style.color = 'red';
+      }
+    </script>
+
+    <!-- Percobaan JS 4 -->
+    <script>
+      function light(sw) {
+        var pic;
+        if (sw == 0) {
+          pic = 'pic_bulboff.gif';
+        } else {
+          pic = 'pic_bulbon.gif';
+        }
+        document.getElementById('myImage').src = pic;
+      }
+    </script>
+
+    <img id="myImage" src="pic_bulboff.gif" width="100" height="180" />
+    <p>
+      <button type="button" onclick="light(1)">Light On</button>
+      <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+  </body>
+</html>

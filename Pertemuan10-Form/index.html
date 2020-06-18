@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <header>
+    <div class="Title">
+      <h2>BIODATA MAHASISWA</h2>
+    </div>
+  </header>
+
+  <body>
+    <form action="proses.php" method="get" autocomplete="on" target="_blank">
+      <fieldset>
+        <legend style="font-weight: bold; font-size: large;">
+          Biodata Mahasiswa
+        </legend>
+        <label for="fname">Nama Depan:</label><br />
+        <input type="text" id="fname" name="fname" required /><br /><br />
+
+        <label for="lname">Nama Belakang:</label><br />
+        <input type="text" id="lname" name="lname" required /><br /><br />
+
+        <label for="gender">Jenis Kelamin:</label><br />
+        <input
+          type="radio"
+          id="male"
+          name="gender"
+          value="Laki-Laki"
+          required
+        />
+        <label for="male">Laki-Laki</label><br />
+        <input
+          type="radio"
+          id="female"
+          name="gender"
+          value="Perempuan"
+          required
+        />
+        <label for="female">Perempuan</label><br />
+        <input type="radio" id="other" name="gender" value="Lainya" required />
+        <label for="other">Lainya</label><br /><br />
+
+        <label for="ttl"> Tempat Tanggal Lahir</label>
+        <input type="text" name="ttp" id="ttp" required />
+        <input type="date" name="ttl" id="ttl" required /><br /><br />
+
+        <label for="nim">NIM:</label><br />
+        <input type="text" name="nim" id="nim" required /><br /><br />
+
+        <label for="kelas">Kelas:</label><br />
+        <select id="kelas" name="kelas" required>
+          <option value="4A">4A</option>
+          <option value="4B">4B</option> </select
+        ><br /><br />
+
+        <label for="agama">Agama:</label><br />
+        <input type="text" name="agama" id="agama" required /><br /><br />
+
+        <label for="hobi">Hobi:</label><br />
+        <input type="text" name="hobi" id="hobi" required /><br /><br />
+
+        <label for="namaA">Nama Ayah:</label><br required />
+        <input type="text" name="namaA" id="namaA" /><br /><br />
+
+        <label for="namaI">Nama Ibu:</label><br />
+        <input type="text" name="namaI" id="namaI" required /><br /><br />
+
+        <label for="noT">No Telp:</label><br />
+        <input type="text" name="noT" id="noT" required /><br /><br />
+
+        <label for="motoH">Moto Hidup:</label><br />
+        <textarea name="motoH" rows="10" cols="30" required></textarea>
+
+        <br />
+        <input
+          type="submit"
+          value="Proses Data"
+          class="tombol"
+          style="font-weight: bold;"
+        />
+        <input type="reset" class="tombol" style="font-weight: bold;" />
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+.Title {
+
+    font-size: 40px;
+    padding: 80px;
+    background: url("image/1.jpg") no-repeat scroll center top;
+    text-align: center;
+    color: #5F48FF;
+    border-radius: 15px;
+    background-size: 1000px 400px;
+}
+
+body {
+    background-color: #014ECC;
+    color: white;
+    font-family: "poppins", sans-serif;
+    padding: 20px;
+}
+
+form {
+    /* //background: url("image/3.jpg") no-repeat scroll center top; */
+    background-color: #5F48FF;
+    border-radius: 15px;
+    padding: 50px;
+    margin-top: 25px;
+}
+
+fieldset {
+    border-radius: 7px;
+    background-color: #5F48FF;
+    padding: 40px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+textarea {
+    border-radius: 6px;
+}
+
+.tombol {
+    background-color: #2F80ED;
+    color: white;
+    font-weight: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 12px;
+}

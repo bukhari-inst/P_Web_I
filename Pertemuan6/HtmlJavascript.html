@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML JavaScript</title>
+  </head>
+
+  <body>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      Klik dsini untuk menampilkan tanggal
+    </button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <button type="button" onclick="myFunction()">
+      Klik dsini!
+      <script>
+        document.getElementById(demo1).innerHTML = 'hello word java script';
+      </script>
+    </button>
+    <button type="button" onclick="myFunction1()">
+      style
+    </button>
+
+    <p id="demo2"></p>
+    <script>
+      function myFunction() {
+        document.getElementById(demo2).innerHTML = 'hello word java script';
+      }
+    </script>
+
+    <script>
+      function myFunction1() {
+        document.getElementById(demo2).style.fontSize = '25px';
+        document.getElementById(demo2).style.color = 'red';
+      }
+    </script>
+  </body>
+</html>
