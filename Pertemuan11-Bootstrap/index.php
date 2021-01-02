@@ -33,4 +33,10 @@ switch ($page) {
         include "simpan-tamu.php";
         include "footer.php";
         break;
+    case "datatamu";
+        include "header.php";
+        include "navigasi.php";
+        include "datatamu.php";
+        include "footer.php";
+        break;
 }

@@ -1,3 +1,7 @@
+<?php
+include "koneksi.php";
+$result = mysqli_query($konek, "SELECT * FROM t_tamu");
+?>
 <main role="main" class="container">
     <table class="table">
         <thead class="thead-dark">
@@ -5,32 +9,28 @@
                 <th scope="col">No</th>
                 <th scope="col">Email</th>
                 <th scope="col">Nama</th>
+                <th scope="col">NIM</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Keperluan</th>
             </tr>
         </thead>
+        <?php
+        $i = 1;
+        while ($row = mysqli_fetch_array($result)) {
+        ?>
         <tbody>
             <tr>
-                <th scope="row">1</th>
-                <td>bukhori414647@gmail.com</td>
-                <td>Bukhari</td>
-                <td>Laki-Laki</td>
-                <td> Learning Bootstrap </td>
+                <td scope="row"><?php echo $i; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['nama']; ?></td>
+                <td><?php echo $row['nim']; ?></td>
+                <td><?php echo $row['gender']; ?></td>
+                <td><?php echo $row['Keperluan']; ?></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td> - </td>
-                <td> - </td>
-                <td> - </td>
-                <td> - </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td> - </td>
-                <td> - </td>
-                <td> - </td>
-                <td> - </td>
-            </tr>
+            <?php
+            $i++;
+        }
+            ?>
         </tbody>
     </table>
 </main>

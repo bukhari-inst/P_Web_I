@@ -11,8 +11,8 @@ $query = mysqli_query($konek, "INSERT INTO t_tamu (no, email, nama, nim, gender,
          VALUES ('','$email', '$nama', '$nim', '$gender', '$keperluan', '$tgl')") or die(mysqli_error($konek));
 
 if ($query) {
-    // echo "<SCRIPT LANGUAGE = 'JavaScript'>alert('Data Berhasil Disimpan')</SCRIPT>";
-    // echo "<meta http-equiv='refresh' content='0; url=tabel.php?page=tabel'>";
+    echo "<SCRIPT LANGUAGE = 'JavaScript'>alert('Data Berhasil Disimpan')</SCRIPT>";
+    echo "<meta http-equiv='refresh' content='0; ?page=datatamu'>";
     echo " data tersimpan";
 } else {
     echo "data gagal tersimpan";
