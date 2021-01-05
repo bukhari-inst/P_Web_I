@@ -8,8 +8,8 @@
 
         <div class="form-group">
             <label for="exampleFormControlInput1">Nama</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="MOCHAMAD BUQORI"
-                name="nama" required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="BUQORI" name="nama"
+                required>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput2">NIM</label>
