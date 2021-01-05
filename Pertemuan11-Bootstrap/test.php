@@ -49,3 +49,28 @@ echo "Berhasil";
 } else {
 echo "Gagal";
 }
+
+<nav aria-label="...">
+    <ul class="pagination">
+        <?php if ($HalamanAktif > 1) : ?>
+        <li class="page-item">
+            <a class="page-link" href="datatamu.php?halaman=<?= $HalamanAktif - 1; ?>" tabindex="-1"
+                aria-disabled="false">Previous</a>
+        </li>
+        <?php endif; ?>
+
+        <?php for ($i = 1; $i <= $JumlahHalaman; $i++) : ?>
+        <?php if ($i == $HalamanAktif) : ?>
+        <li class="page-item active" aria-current="page">
+            <a class="page-link" href="datatamu.php?halaman=<?= $i[1]; ?>"><?= $i[1]; ?><span
+                    class="sr-only">(current)</span></a>
+        </li>
+        <?php endif; ?>
+        <?php endfor; ?>
+
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>

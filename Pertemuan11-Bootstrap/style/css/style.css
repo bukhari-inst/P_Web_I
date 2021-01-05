@@ -6,3 +6,8 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
 }
+
+.pagenation a {
+  padding: 7px;
+  font-size: x-large;
+}

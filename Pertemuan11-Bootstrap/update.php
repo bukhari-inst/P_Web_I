@@ -16,8 +16,8 @@ $data = mysqli_fetch_array($query);
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Nama</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Bukhari" name="nama"
-                required value=<?php echo $data['nama']; ?>>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="MOCHAMAD BUQORI"
+                name="nama" required value=<?php echo $data['nama']; ?>>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput2">NIM</label>
@@ -32,7 +32,7 @@ $data = mysqli_fetch_array($query);
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Keperluan</label>
             <textarea class="form-control" name="keperluan" required id="exampleFormControlTextarea1"
-                rows="3"><?php echo $data['nama']; ?></textarea>
+                rows="3"><?php echo $data['Keperluan']; ?></textarea>
         </div>
         <p><button type="submit" class="btn btn-dark">Update</button></p>
     </form>

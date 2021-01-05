@@ -1,8 +1,38 @@
 <?php
+include "header.php";
+include "navigasi.php";
 include "koneksi.php";
-$result = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC");
+include "footer.php";
+
+$JumlahDataPerHalaman = 4;
+$limit = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC");
+$JumlahData = mysqli_num_rows($limit);
+$JumlahHalaman = ceil($JumlahData / $JumlahDataPerHalaman);
+$HalamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+$AwalData = ($JumlahDataPerHalaman * $HalamanAktif) - $JumlahDataPerHalaman;
+
+$result = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC LIMIT $AwalData,$JumlahDataPerHalaman");
+
 ?>
 <main role="main" class="container">
+    <div class="pagenation">
+        <?php if ($HalamanAktif > 1) : ?>
+        <a href="datatamu.php?halaman=<?= $HalamanAktif - 1; ?>">&laquo;</a>
+        <?php endif; ?>
+
+        <?php for ($i = 1; $i <= $JumlahHalaman; $i++) : ?>
+        <?php if ($i == $HalamanAktif) : ?>
+        <a href="datatamu.php?halaman=<?= $i; ?>" style="font-weight: bold; color: red;"><?= $i; ?></a>
+        <?php else : ?>
+        <a href="datatamu.php?halaman=<?= $i; ?>"><?= $i; ?></a>
+        <?php endif; ?>
+        <?php endfor; ?>
+
+        <?php if ($HalamanAktif < $JumlahHalaman) : ?>
+        <a href="datatamu.php?halaman=<?= $HalamanAktif + 1; ?>">&raquo;</a>
+        <?php endif; ?>
+    </div>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>
