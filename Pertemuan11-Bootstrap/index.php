@@ -45,4 +45,16 @@ switch ($page) {
         include "delete.php";
         include "footer.php";
         break;
+    case "update";
+        include "header.php";
+        include "navigasi.php";
+        include "update.php";
+        include "footer.php";
+        break;
+    case "prosesupdate";
+        include "header.php";
+        include "navigasi.php";
+        include "prosesupdate.php";
+        include "footer.php";
+        break;
 }

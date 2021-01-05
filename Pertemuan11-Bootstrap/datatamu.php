@@ -12,7 +12,7 @@ $result = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC");
                 <th scope="col">NIM</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Keperluan</th>
-                <th scope="col">Hapus</th>
+                <th scope="col" colspan="2">Hapus</th>
             </tr>
         </thead>
         <?php
@@ -29,6 +29,7 @@ $result = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC");
                 <td><?php echo $row['Keperluan']; ?></td>
                 <td>
                     <a href="?page=hapus&id=<?php echo $row['no']; ?>">Hapus
+                        <a href="?page=update&id=<?php echo $row['no']; ?>">Update
                 </td>
             </tr>
             <?php
