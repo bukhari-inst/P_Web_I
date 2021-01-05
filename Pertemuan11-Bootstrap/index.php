@@ -39,4 +39,10 @@ switch ($page) {
         include "datatamu.php";
         include "footer.php";
         break;
+    case "hapus";
+        include "header.php";
+        include "navigasi.php";
+        include "delete.php";
+        include "footer.php";
+        break;
 }

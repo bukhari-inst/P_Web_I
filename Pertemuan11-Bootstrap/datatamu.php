@@ -1,6 +1,6 @@
 <?php
 include "koneksi.php";
-$result = mysqli_query($konek, "SELECT * FROM t_tamu");
+$result = mysqli_query($konek, "SELECT * FROM t_tamu ORDER BY no DESC");
 ?>
 <main role="main" class="container">
     <table class="table">
@@ -12,6 +12,7 @@ $result = mysqli_query($konek, "SELECT * FROM t_tamu");
                 <th scope="col">NIM</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Keperluan</th>
+                <th scope="col">Hapus</th>
             </tr>
         </thead>
         <?php
@@ -26,6 +27,9 @@ $result = mysqli_query($konek, "SELECT * FROM t_tamu");
                 <td><?php echo $row['nim']; ?></td>
                 <td><?php echo $row['gender']; ?></td>
                 <td><?php echo $row['Keperluan']; ?></td>
+                <td>
+                    <a href="?page=hapus&id=<?php echo $row['no']; ?>">Hapus
+                </td>
             </tr>
             <?php
             $i++;

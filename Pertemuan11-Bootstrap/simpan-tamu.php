@@ -13,7 +13,6 @@ $query = mysqli_query($konek, "INSERT INTO t_tamu (no, email, nama, nim, gender,
 if ($query) {
     echo "<SCRIPT LANGUAGE = 'JavaScript'>alert('Data Berhasil Disimpan')</SCRIPT>";
     echo "<meta http-equiv='refresh' content='0; ?page=datatamu'>";
-    echo " data tersimpan";
 } else {
     echo "data gagal tersimpan";
 }
